@@ -17,6 +17,7 @@
 		CFFA06F1273D2FEA00C0F128 /* collectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFA06F0273D2FEA00C0F128 /* collectionViewCell.swift */; };
 		CFFA06F3273D351200C0F128 /* tableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFA06F2273D351200C0F128 /* tableViewController.swift */; };
 		CFFA06F7273D38E100C0F128 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFA06F6273D38E100C0F128 /* TableViewCell.swift */; };
+		CFFA06FC273E427400C0F128 /* burger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFA06FB273E427400C0F128 /* burger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		CFFA06F0273D2FEA00C0F128 /* collectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectionViewCell.swift; sourceTree = "<group>"; };
 		CFFA06F2273D351200C0F128 /* tableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewController.swift; sourceTree = "<group>"; };
 		CFFA06F6273D38E100C0F128 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		CFFA06FB273E427400C0F128 /* burger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = burger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		CFFA06D9273D22BE00C0F128 /* Gird-List View */ = {
 			isa = PBXGroup;
 			children = (
+				CFFA06F8273E3F1E00C0F128 /* Models */,
 				CFFA06DA273D22BE00C0F128 /* AppDelegate.swift */,
 				CFFA06DC273D22BE00C0F128 /* SceneDelegate.swift */,
 				CFFA06DE273D22BE00C0F128 /* ViewController.swift */,
@@ -77,6 +80,14 @@
 				CFFA06E8273D22C100C0F128 /* Info.plist */,
 			);
 			path = "Gird-List View";
+			sourceTree = "<group>";
+		};
+		CFFA06F8273E3F1E00C0F128 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CFFA06FB273E427400C0F128 /* burger.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +167,7 @@
 				CFFA06F3273D351200C0F128 /* tableViewController.swift in Sources */,
 				CFFA06F1273D2FEA00C0F128 /* collectionViewCell.swift in Sources */,
 				CFFA06F7273D38E100C0F128 /* TableViewCell.swift in Sources */,
+				CFFA06FC273E427400C0F128 /* burger.swift in Sources */,
 				CFFA06DD273D22BE00C0F128 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

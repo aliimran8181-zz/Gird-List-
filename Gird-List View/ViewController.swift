@@ -15,26 +15,31 @@ class ViewController: UIViewController {
     @IBOutlet weak var ContainerView2: UIView!
   
     @IBOutlet weak var Change: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         Titlelbl.text = "Grid View"
+        Change.setImage(UIImage(named: "list.png"), for: .normal)
+        
     }
     @IBAction func ChangeTapped(_ sender: Any) {
         isSelected = !isSelected
-            if isSelected {
-                ContainerView1.isHidden = true
+        if isSelected {
                 ContainerView2.isHidden = false
-                Change.setImage(UIImage(named: "grid.png"), for: .normal)
-    
+                ContainerView1.isHidden = true
+                Change.setImage(UIImage(named: "list.png"), for: .normal)
                 Titlelbl.text = "Grid View"
             } else {
-                ContainerView2.isHidden = true
                 ContainerView1.isHidden = false
-                Change.setImage(UIImage(named: "list.png"), for: .normal)
+                ContainerView2.isHidden = true
+                Change.setImage(UIImage(named: "grid.png"), for: .normal)
                 Titlelbl.text = "Table View"
                             }
    
     
     }
+    
 }
+
 

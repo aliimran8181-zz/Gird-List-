@@ -12,14 +12,6 @@ class collectionViewController: UIViewController,UICollectionViewDelegate, UICol
     
     @IBOutlet weak var collectionView: UICollectionView!
     // Initilizing variables
-    let burgers = ["Big mac","Hamburger","Zinger", "Mighty Zinger","Double Cheese" ]
-    let burgerImage: [UIImage] = [
-        UIImage(named: "bigmac")!,
-        UIImage(named: "ham")!,
-        UIImage(named: "zinger")!,
-        UIImage(named: "mighty")!,
-        UIImage(named: "double")!
-    ]
     
     
     
@@ -49,8 +41,8 @@ class collectionViewController: UIViewController,UICollectionViewDelegate, UICol
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! collectionViewCell
-        cell.lblView.text = burgers[indexPath.item]
-        cell.burgerImage.image = burgerImage[indexPath.item]
+        cell.lblView.text = burgers[indexPath.item].name
+        cell.burgerImage.image = burgers[indexPath.item].image
         cell.layer.borderColor = UIColor.green.cgColor
         cell.layer.cornerRadius = 10
         cell.layer.borderWidth = 2

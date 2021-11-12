@@ -14,16 +14,8 @@ class tableViewController: UIViewController {
     static let cellIdentifier = "ReusableCell"
     /*
      MARK: Taking data from the models
-     i've made a message structure in the model that have two variables sender and body
+     i've made a Burger structure in the model that have two variables sender and body
      */
-    let burgers = ["Big mac","Hamburger","Zinger", "Mighty Zinger","Double Cheese" ]
-    let burgerImage: [UIImage] = [
-        UIImage(named: "bigmac")!,
-        UIImage(named: "ham")!,
-        UIImage(named: "zinger")!,
-        UIImage(named: "mighty")!,
-        UIImage(named: "double")!
-    ]
     //MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +32,11 @@ extension tableViewController: UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:TableViewCell = tableView.dequeueReusableCell(withIdentifier: tableViewController.cellIdentifier, for: indexPath) as! TableViewCell
-        cell.textLabel?.text = burgers[indexPath.row]
-        cell.burgerImage.image = burgerImage[indexPath.row]
+        cell.textLabel?.text = burgers[indexPath.row].name
+        cell.burgerImage.image = burgers[indexPath.row].image
+        cell.layer.borderColor = UIColor.green.cgColor
+        cell.layer.cornerRadius = 10
+        cell.layer.borderWidth = 1
         return cell
         
     }
