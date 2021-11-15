@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9923710EB9B4D6EA28989DC7 /* Pods_Gird_List_View.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6E978781C6C72C46BD440BA /* Pods_Gird_List_View.framework */; };
 		CFFA06DB273D22BE00C0F128 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFA06DA273D22BE00C0F128 /* AppDelegate.swift */; };
 		CFFA06DD273D22BE00C0F128 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFA06DC273D22BE00C0F128 /* SceneDelegate.swift */; };
 		CFFA06DF273D22BE00C0F128 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFA06DE273D22BE00C0F128 /* ViewController.swift */; };
@@ -17,10 +18,12 @@
 		CFFA06F1273D2FEA00C0F128 /* collectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFA06F0273D2FEA00C0F128 /* collectionViewCell.swift */; };
 		CFFA06F3273D351200C0F128 /* tableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFA06F2273D351200C0F128 /* tableViewController.swift */; };
 		CFFA06F7273D38E100C0F128 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFA06F6273D38E100C0F128 /* TableViewCell.swift */; };
-		CFFA06FC273E427400C0F128 /* burger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFA06FB273E427400C0F128 /* burger.swift */; };
+		CFFA06FC273E427400C0F128 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFA06FB273E427400C0F128 /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		781380430DB4CAE02C2D3B41 /* Pods-Gird-List View.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gird-List View.debug.xcconfig"; path = "Target Support Files/Pods-Gird-List View/Pods-Gird-List View.debug.xcconfig"; sourceTree = "<group>"; };
+		A9BFA94CF3279C4D58EE9464 /* Pods-Gird-List View.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gird-List View.release.xcconfig"; path = "Target Support Files/Pods-Gird-List View/Pods-Gird-List View.release.xcconfig"; sourceTree = "<group>"; };
 		CFFA06D7273D22BE00C0F128 /* Gird-List View.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gird-List View.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFFA06DA273D22BE00C0F128 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFFA06DC273D22BE00C0F128 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,7 +36,8 @@
 		CFFA06F0273D2FEA00C0F128 /* collectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = collectionViewCell.swift; sourceTree = "<group>"; };
 		CFFA06F2273D351200C0F128 /* tableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewController.swift; sourceTree = "<group>"; };
 		CFFA06F6273D38E100C0F128 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		CFFA06FB273E427400C0F128 /* burger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = burger.swift; sourceTree = "<group>"; };
+		CFFA06FB273E427400C0F128 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		E6E978781C6C72C46BD440BA /* Pods_Gird_List_View.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gird_List_View.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9923710EB9B4D6EA28989DC7 /* Pods_Gird_List_View.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7FF642DC76D8414993B39DD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6E978781C6C72C46BD440BA /* Pods_Gird_List_View.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C486F1E98882054B22682304 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				781380430DB4CAE02C2D3B41 /* Pods-Gird-List View.debug.xcconfig */,
+				A9BFA94CF3279C4D58EE9464 /* Pods-Gird-List View.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CFFA06CE273D22BE00C0F128 = {
 			isa = PBXGroup;
 			children = (
 				CFFA06D9273D22BE00C0F128 /* Gird-List View */,
 				CFFA06D8273D22BE00C0F128 /* Products */,
+				C486F1E98882054B22682304 /* Pods */,
+				7FF642DC76D8414993B39DD9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,7 +109,7 @@
 		CFFA06F8273E3F1E00C0F128 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CFFA06FB273E427400C0F128 /* burger.swift */,
+				CFFA06FB273E427400C0F128 /* API.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -97,9 +121,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFFA06EB273D22C100C0F128 /* Build configuration list for PBXNativeTarget "Gird-List View" */;
 			buildPhases = (
+				D97441E18748E397E6876B32 /* [CP] Check Pods Manifest.lock */,
 				CFFA06D3273D22BE00C0F128 /* Sources */,
 				CFFA06D4273D22BE00C0F128 /* Frameworks */,
 				CFFA06D5273D22BE00C0F128 /* Resources */,
+				0314A81996FA1856B076C0AF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,6 +182,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0314A81996FA1856B076C0AF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gird-List View/Pods-Gird-List View-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gird-List View/Pods-Gird-List View-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gird-List View/Pods-Gird-List View-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D97441E18748E397E6876B32 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gird-List View-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CFFA06D3273D22BE00C0F128 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -167,7 +235,7 @@
 				CFFA06F3273D351200C0F128 /* tableViewController.swift in Sources */,
 				CFFA06F1273D2FEA00C0F128 /* collectionViewCell.swift in Sources */,
 				CFFA06F7273D38E100C0F128 /* TableViewCell.swift in Sources */,
-				CFFA06FC273E427400C0F128 /* burger.swift in Sources */,
+				CFFA06FC273E427400C0F128 /* API.swift in Sources */,
 				CFFA06DD273D22BE00C0F128 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,6 +380,7 @@
 		};
 		CFFA06EC273D22C100C0F128 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 781380430DB4CAE02C2D3B41 /* Pods-Gird-List View.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -340,6 +409,7 @@
 		};
 		CFFA06ED273D22C100C0F128 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9BFA94CF3279C4D58EE9464 /* Pods-Gird-List View.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

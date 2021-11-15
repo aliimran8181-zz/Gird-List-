@@ -8,7 +8,11 @@
 import UIKit
 
 class collectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var burgerImage: UIImageView!
+  
+    @IBOutlet weak var ImageView: UIImageView!
+    @IBOutlet weak var LabelSubtext: UILabel!
+    @IBOutlet weak var labelPublished: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     
-    @IBOutlet weak var lblView: UILabel!
+    
 }

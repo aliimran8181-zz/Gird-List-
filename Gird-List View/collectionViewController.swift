@@ -6,19 +6,20 @@
 //
 
 import UIKit
-
+import SDWebImage
 class collectionViewController: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
-    
+  
     @IBOutlet weak var collectionView: UICollectionView!
     // Initilizing variables
     
-    
+    var articles: Array<Dictionary<String,Any>> = []
     
     //MARK: ViewDIDLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
+        loadData()
         setUi()
        
         // Do any additional setup after loading the view.
@@ -36,18 +37,69 @@ class collectionViewController: UIViewController,UICollectionViewDelegate, UICol
     
     */
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       return burgers.count
+        print(articles.count)
+       return articles.count
+      
         
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! collectionViewCell
-        cell.lblView.text = burgers[indexPath.item].name
-        cell.burgerImage.image = burgers[indexPath.item].image
-        cell.layer.borderColor = UIColor.green.cgColor
+        let row = articles[indexPath.row];
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! collectionViewCell
+        
+        if let title = row["title"] as? String{
+            cell.titleLabel.text = title;
+        }
+        
+        if let description = row["description"] as? String{
+            cell.LabelSubtext.text = description
+            
+        }
+        
+        if let urlToImage = row["urlToImage"] as? String{
+            cell.ImageView.sd_setImage(with: URL(string: urlToImage), placeholderImage: UIImage(named: "placeholder"))
+           }
+        
+        if let publishedDate = row["publishedAt"] as? String{
+                cell.labelPublished.text = "Published : " + publishedDate
+
+            
+
+        }
+        cell.layer.cornerRadius = 5
+        cell.layer.borderColor = UIColor.darkGray.cgColor
         cell.layer.cornerRadius = 10
         cell.layer.borderWidth = 2
-    
-        return cell
+        return cell;
     }
-  
+    func loadData(){
+            URLSession.shared.dataTask(with: URLRequest(url : apiUrl!)) { (data, response, error) in
+                if let httpResponse = response as? HTTPURLResponse {
+                    if(httpResponse.statusCode != 200) {
+                    }
+                }
+    
+                if let myData = data {
+                    if let json = try? JSONSerialization.jsonObject(with: myData, options: []) as? Dictionary<String,Any> {
+                        //PARSE IT
+                        if let statusCode = json["status"] as? String {
+                            if(statusCode == "ok") {
+                                if let articles = json["articles"] as? Array<Dictionary<String,Any>> {
+                                    self.articles = articles;
+                                    DispatchQueue.main.async {
+                                        self.collectionView.reloadData()
+                                    }
+                                } else {
+                                    //ERROR WITH API REQUEST NOT OK
+                                }
+                            }
+                        } else {
+                            //ERROR WITH API REQUEST NOT OK
+                        }
+                    } else {
+                        print("Error");
+                    }
+                }
+            }
+            .resume();
+        }
 }
